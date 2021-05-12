@@ -1,4 +1,6 @@
 import { app, BrowserWindow } from 'electron';
+import child from 'child_process';
+
 declare const MAIN_WINDOW_WEBPACK_ENTRY: any;
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -6,9 +8,26 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
   app.quit();
 }
 
+
+child.exec('.\\bsmi-mail-kernel.exe', (err, data) => {
+  if (err) {
+    console.log(err);
+  }
+  console.log(data);
+})
+
+
 const createWindow = (): void => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
+
+    webPreferences: {
+      nodeIntegration: true,//是否启用节点集成
+      nodeIntegrationInWorker:true,//是否在Web工作器中启用了Node集成
+      contextIsolation: false,//electron为12x版本新增此行
+      devTools:true,//是否开启 DevTools
+      webSecurity: false//是否禁用同源策略(上线删除)
+    },
     height: 600,
     width: 800,
   });

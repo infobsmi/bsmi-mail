@@ -4,3 +4,9 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+#div-log {
+  width: 400px;
+  height: 300px;
+  overflow: auto;
+}
