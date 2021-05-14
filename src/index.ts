@@ -28,8 +28,8 @@ const createWindow = (): void => {
       devTools:true,//是否开启 DevTools
       webSecurity: false//是否禁用同源策略(上线删除)
     },
-    height: 600,
-    width: 800,
+    height: 800,
+    width: 1280,
   });
 
   // and load the index.html of the app.
