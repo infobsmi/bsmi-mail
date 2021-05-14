@@ -597,6 +597,26 @@
     "@typescript-eslint/types" "4.23.0"
     eslint-visitor-keys "^2.0.0"
 
+"@vaadin/router@^1.7.4":
+  version "1.7.4"
+  resolved "https://registry.nlark.com/@vaadin/router/download/@vaadin/router-1.7.4.tgz#76d78d0091275cadf1ac18f0e8b75bf0fd6fe253"
+  integrity sha1-dteNAJEnXK3xrBjw6Ldb8P1v4lM=
+  dependencies:
+    "@vaadin/vaadin-usage-statistics" "^2.1.0"
+    path-to-regexp "2.4.0"
+
+"@vaadin/vaadin-development-mode-detector@^2.0.0":
+  version "2.0.4"
+  resolved "https://registry.nlark.com/@vaadin/vaadin-development-mode-detector/download/@vaadin/vaadin-development-mode-detector-2.0.4.tgz#f49c8009856bead92d248377c36b295b5aae78e5"
+  integrity sha1-9JyACYVr6tktJIN3w2spW1queOU=
+
+"@vaadin/vaadin-usage-statistics@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.nlark.com/@vaadin/vaadin-usage-statistics/download/@vaadin/vaadin-usage-statistics-2.1.0.tgz#9c0fd71dded80f401bcdfbcb3f45b5640fc4256d"
+  integrity sha1-nA/XHd7YD0AbzfvLP0W1ZA/EJW0=
+  dependencies:
+    "@vaadin/vaadin-development-mode-detector" "^2.0.0"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.npm.taobao.org/@webassemblyjs/ast/download/@webassemblyjs/ast-1.9.0.tgz?cache=0&sync_timestamp=1610041386122&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40webassemblyjs%2Fast%2Fdownload%2F%40webassemblyjs%2Fast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -741,6 +761,11 @@
     "@webassemblyjs/ast" "1.9.0"
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
+
+"@webcomponents/webcomponentsjs@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.nlark.com/@webcomponents/webcomponentsjs/download/@webcomponents/webcomponentsjs-2.5.0.tgz#61b27785a6ad5bfd68fa018201fe418b118cb38d"
+  integrity sha1-YbJ3haatW/1o+gGCAf5BixGMs40=
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -5269,6 +5294,11 @@ path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-0.1.7.tgz?cache=0&sync_timestamp=1601400247487&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpath-to-regexp%2Fdownload%2Fpath-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+
+path-to-regexp@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-2.4.0.tgz?cache=0&sync_timestamp=1601400247487&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpath-to-regexp%2Fdownload%2Fpath-to-regexp-2.4.0.tgz#35ce7f333d5616f1c1e1bfe266c3aba2e5b2e704"
+  integrity sha1-Nc5/Mz1WFvHB4b/iZsOrouWy5wQ=
 
 path-type@^1.0.0:
   version "1.1.0"

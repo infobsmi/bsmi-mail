@@ -28,6 +28,44 @@
 
 import './index.css';
 import net from 'net';
+//引入路由组件
+import {Router} from '@vaadin/router';
+
+
+class HomeView extends HTMLElement {
+    constructor() {
+        super();
+    }
+    // This is called when our element is attached to the DOM
+    connectedCallback() {
+        this.innerHTML = `<h1>Welcome home!<button id="home-view-button">I am button</button></h1>`;
+        document.getElementById("home-view-button")
+            .addEventListener("click", () => {
+                window.alert("home-view-button been clicked!");
+        })
+    }
+}
+// Tell the browser to associate the '<home-view>' tag with HomeView class
+customElements.define('x-home-view', HomeView);
+
+class UserList extends HTMLElement {
+    constructor() {
+        super();
+    }
+    connectedCallback() {
+        this.innerHTML = `<p>User List</p>`
+    }
+}
+
+customElements.define('x-user-list', UserList);
+
+const outlet = document.getElementById('outlet');
+const router = new Router(outlet);
+router.setRoutes([
+    {path: '/', component: 'x-home-view'},
+    {path: '/users', component: 'x-user-list'},
+  //  {path: '/users/:user', component: 'x-user-profile'},
+]);
 
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
 
@@ -89,3 +127,6 @@ socket_namedpipe.on("data", (chunk) => {
 document.getElementById("rpc-test").addEventListener("click", () => {
     make_rpc_call();
 })
+
+
+
