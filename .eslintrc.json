@@ -5,6 +5,7 @@
     "node": true
   },
     "extends": [
+      "plugin:import/typescript",
       "eslint:recommended",
       "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended",

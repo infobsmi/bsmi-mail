@@ -79,7 +79,7 @@
     "@typescript-eslint/parser": "^4.0.1",
     "css-loader": "^4.2.1",
     "electron": "12.0.7",
-    "eslint": "^7.6.0",
+    "eslint": "^7.26.0",
     "eslint-plugin-import": "^2.20.0",
     "fork-ts-checker-webpack-plugin": "^5.0.14",
     "html-webpack-plugin": "^5.3.1",
@@ -91,6 +91,8 @@
   "dependencies": {
     "@vaadin/router": "^1.7.4",
     "@webcomponents/webcomponentsjs": "^2.5.0",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "global": "^4.4.0"
   }
 }
