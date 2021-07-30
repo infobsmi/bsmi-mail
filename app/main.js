@@ -1,23 +1,27 @@
-import { app, BrowserWindow } from 'electron';
+const { app, BrowserWindow } = import('electron');
 import child from 'child_process';
 
-declare const MAIN_WINDOW_WEBPACK_ENTRY: any;
+ const MAIN_WINDOW_WEBPACK_ENTRY = "http://localhost:3711";
 
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
-  app.quit();
+
+//如果是正式环境，加入这个自启动
+
+
+
+
+const isEnvSet = 'ELECTRON_IS_DEV' in process.env;
+console.log(isEnvSet);
+if (!isEnvSet) {
+  child.exec('.\\bsmi-mail-kernel.exe', (err, data) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log(data);
+  })
 }
 
 
-child.exec('.\\bsmi-mail-kernel.exe', (err, data) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log(data);
-})
-
-
-const createWindow = (): void => {
+const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
 
