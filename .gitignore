@@ -89,3 +89,6 @@ typings/
 
 # Electron-Forge
 out/
+*.exe
+vol/
+*.log

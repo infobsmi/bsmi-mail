@@ -1,7 +1,7 @@
-const { app, BrowserWindow } = import('electron');
-import child from 'child_process';
+const { app, BrowserWindow } = require('electron');
+const {child} = require('child_process');
 
- const MAIN_WINDOW_WEBPACK_ENTRY = "http://localhost:3711";
+const MAIN_WINDOW_WEBPACK_ENTRY = "http://localhost:3711";
 
 
 //如果是正式环境，加入这个自启动
@@ -37,7 +37,7 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+  mainWindow.loadURL("http://localhost:3711");
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

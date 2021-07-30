@@ -3,7 +3,7 @@
   "productName": "bsmi-mail",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": ".webpack/main",
+  "main": "./app/main.js",
   "scripts": {
     "start": "cross-env ELECTRON_IS_DEV=1 electron .",
     "package": "electron-forge package",
@@ -17,80 +17,9 @@
     "email": "278153+cnmade@users.noreply.github.com"
   },
   "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "bsmi_mail"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ],
-      "plugins": [
-        [
-          "@electron-forge/plugin-webpack",
-          {
-            "mainConfig": "./webpack.main.config.js",
-            "renderer": {
-              "config": "./webpack.renderer.config.js",
-              "entryPoints": [
-                {
-                  "html": "./src/index.html",
-                  "js": "./src/renderer.ts",
-                  "name": "main_window"
-                },
-                {
-                  "html": "./src/about/about.html",
-                  "js": "./src/about/about.ts",
-                  "name": "about"
-                }
-              ]
-            }
-          }
-        ]
-      ]
-    }
-  },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
-    "@electron-forge/plugin-webpack": "6.0.0-beta.54",
-    "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
-    "@typescript-eslint/eslint-plugin": "^4.0.1",
-    "@typescript-eslint/parser": "^4.0.1",
-    "css-loader": "^4.2.1",
-    "electron": "12.0.7",
-    "eslint": "^7.26.0",
-    "eslint-plugin-import": "^2.20.0",
-    "fork-ts-checker-webpack-plugin": "^5.0.14",
-    "html-webpack-plugin": "^5.3.1",
-    "node-loader": "^1.0.1",
-    "style-loader": "^1.2.1",
-    "ts-loader": "^8.0.2",
-    "typescript": "^4.0.2"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
-    "electron-squirrel-startup": "^1.0.0",
-    "eslint-import-resolver-webpack": "^0.13.1"
+    "cross-env": "^7.0.3"
   }
 }
